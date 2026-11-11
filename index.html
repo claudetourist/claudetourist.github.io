@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>riteshj · builder</title>
+<meta name="description" content="riteshj: personal portfolio of software projects, tools and data-science experiments.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='14' fill='%230f766e'/><text x='50%' y='54%' text-anchor='middle' dominant-baseline='middle' font-family='monospace' font-size='34' font-weight='700' fill='white'>rj</text></svg>">
+<style>
+:root{
+  --bg:#fafaf7;--surface:#ffffff;--text:#1c1c1a;--muted:#5f5f5a;--line:#e6e4dc;
+  --accent:#0f766e;--accent-soft:#e3f2ef;--tag:#f1efe8;
+}
+@media (prefers-color-scheme:dark){
+  :root{--bg:#121413;--surface:#1a1d1c;--text:#ecebe6;--muted:#a3a39b;--line:#2b2f2d;
+    --accent:#5eead4;--accent-soft:#16302c;--tag:#232725;}
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--text);
+  font:17px/1.65 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:var(--accent);text-decoration-thickness:1px;text-underline-offset:3px}
+.wrap{max-width:860px;margin:0 auto;padding:0 20px}
+header.top{display:flex;justify-content:space-between;align-items:center;padding:22px 0}
+.logo{font:700 18px/1 ui-monospace,Consolas,monospace;color:var(--text);text-decoration:none}
+.logo span{color:var(--accent)}
+nav a{color:var(--muted);text-decoration:none;margin-left:18px;font-size:15px}
+nav a:hover{color:var(--accent)}
+.hero{padding:56px 0 40px}
+.hero h1{font-size:clamp(34px,6vw,52px);line-height:1.1;margin:0 0 18px;letter-spacing:-.02em}
+.hero h1 em{font-style:normal;color:var(--accent)}
+.hero p{font-size:19px;color:var(--muted);max-width:620px;margin:0 0 26px}
+.btns{display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-block;padding:10px 18px;border-radius:10px;text-decoration:none;font-weight:600;font-size:15px;border:1px solid var(--line);color:var(--text);background:var(--surface)}
+.btn.primary{background:var(--accent);border-color:var(--accent);color:var(--bg)}
+section{padding:36px 0;border-top:1px solid var(--line)}
+section h2{font-size:14px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin:0 0 22px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:16px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:20px;display:flex;flex-direction:column}
+.card h3{margin:0 0 6px;font-size:18px}
+.card p{margin:0 0 14px;color:var(--muted);font-size:15.5px;flex:1}
+.tags{display:flex;flex-wrap:wrap;gap:6px}
+.tags span{background:var(--tag);color:var(--muted);font-size:12.5px;padding:3px 9px;border-radius:99px}
+.card .link{margin-top:12px;font-size:14.5px;font-weight:600}
+.about p{max-width:660px;margin:0 0 14px}
+.side{display:flex;gap:18px;align-items:flex-start;background:var(--accent-soft);border-radius:14px;padding:20px}
+.side .badge{flex:none;width:46px;height:46px;border-radius:12px;background:var(--accent);color:var(--bg);display:grid;place-items:center;font-size:22px}
+.side h3{margin:0 0 4px;font-size:18px}
+.side p{margin:0;color:var(--muted);font-size:15.5px}
+.contact ul{list-style:none;padding:0;margin:0;display:flex;gap:12px;flex-wrap:wrap}
+footer{padding:30px 0 40px;color:var(--muted);font-size:14px;border-top:1px solid var(--line)}
+@media (max-width:520px){nav a{margin-left:12px}.hero{padding:36px 0 28px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <a class="logo" href="#">rj<span>.</span></a>
+    <nav><a href="#projects">Projects</a><a href="#about">About</a><a href="#contact">Contact</a></nav>
+  </header>
+
+  <div class="hero">
+    <h1>Hi, I'm <em>riteshj</em>.<br>I build small, dependable tools.</h1>
+    <p>Desktop utilities, personal apps and data-science experiments, mostly built to fix my own everyday problems, with AI pair-programming along the way.</p>
+    <div class="btns">
+      <a class="btn primary" href="#projects">See projects</a>
+      <a class="btn" href="https://github.com/claudetourist">GitHub</a>
+    </div>
+  </div>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Backup Hub</h3>
+        <p>A Windows desktop app with two jobs: keep reliable backups across external drives, and keep an index of every file so anything can be found again. Drives are recognised by name, not drive letter.</p>
+        <div class="tags"><span>Windows</span><span>Desktop app</span><span>SQLite</span><span>Backups</span></div>
+      </div>
+      <div class="card">
+        <h3>Vault</h3>
+        <p>A private, local-first app for money and life admin: accounts, home, reminders, an emergency kit, and full search across all of it, with encrypted backups.</p>
+        <div class="tags"><span>Personal app</span><span>Local-first</span><span>Encryption</span></div>
+      </div>
+      <div class="card">
+        <h3>Mumbai PM2.5 forecasting</h3>
+        <p>An entry in the Zindi "Google Mumbai Data Challenge": hourly PM2.5 air-quality forecasts for four city monitoring stations, built from weather and pollution data and scored by RMSE.</p>
+        <div class="tags"><span>Python</span><span>Machine learning</span><span>Time series</span></div>
+      </div>
+      <div class="card">
+        <h3>Vastu Scanner</h3>
+        <p>A phone app for quick Vastu checks of a home, kept open source on GitHub.</p>
+        <div class="tags"><span>Mobile</span><span>Open source</span></div>
+        <a class="link" href="https://github.com/claudetourist/vastuscanner">View on GitHub →</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="about">
+    <h2>About</h2>
+    <p>I like software that stays simple, explains itself, and keeps working for years. Most of what I build starts as a fix for my own setup, such as backups, file organisation and personal finance, and grows into a proper tool.</p>
+    <p>I also enjoy data competitions as a way to learn forecasting and machine-learning techniques on real-world problems.</p>
+    <div class="side">
+      <div class="badge" aria-hidden="true">📖</div>
+      <div>
+        <h3>On the side: MythLearn</h3>
+        <p>Short animated videos retelling stories from mythology, produced with a scripted video pipeline. Follow along on Instagram at <a href="https://www.instagram.com/myth.learn/">@myth.learn</a>.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <h2>Contact</h2>
+    <ul>
+      <li><a class="btn" href="https://github.com/claudetourist">GitHub · claudetourist</a></li>
+      <li><a class="btn" href="https://www.instagram.com/myth.learn/">Instagram · @myth.learn</a></li>
+    </ul>
+  </section>
+
+  <footer>© 2026 riteshj · Hand-written HTML, hosted on GitHub Pages.</footer>
+</div>
+</body>
+</html>
