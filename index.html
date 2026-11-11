@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>riteshj · builder</title>
-<meta name="description" content="riteshj: personal portfolio of software projects, tools and data-science experiments.">
+<title>Ritesh Jethmalani</title>
+<meta name="description" content="Ritesh Jethmalani: Senior Software Engineer. Experience, skills and side projects.">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='14' fill='%230f766e'/><text x='50%' y='54%' text-anchor='middle' dominant-baseline='middle' font-family='monospace' font-size='34' font-weight='700' fill='white'>rj</text></svg>">
 <style>
 :root{
@@ -48,6 +48,18 @@ section h2{font-size:14px;letter-spacing:.12em;text-transform:uppercase;color:va
 .side h3{margin:0 0 4px;font-size:18px}
 .side p{margin:0;color:var(--muted);font-size:15.5px}
 .contact ul{list-style:none;padding:0;margin:0;display:flex;gap:12px;flex-wrap:wrap}
+.timeline{list-style:none;margin:0;padding:0}
+.timeline li{display:grid;grid-template-columns:120px 1fr;gap:18px;padding:0 0 22px;margin:0 0 22px;border-bottom:1px dashed var(--line)}
+.timeline li:last-child{border-bottom:0;margin:0;padding:0}
+.timeline .when{font:600 14px/1.9 ui-monospace,Consolas,monospace;color:var(--accent)}
+.timeline h3{margin:0;font-size:18px}
+.timeline .role{margin:0 0 6px;color:var(--muted);font-size:14.5px}
+.timeline p{margin:0;font-size:15.5px}
+.skills{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:14px}
+.skills div{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:16px}
+.skills h3{margin:0 0 4px;font-size:15.5px}
+.skills p{margin:0;color:var(--muted);font-size:14.5px;line-height:1.55}
+@media (max-width:560px){.timeline li{grid-template-columns:1fr;gap:4px}}
 footer{padding:30px 0 40px;color:var(--muted);font-size:14px;border-top:1px solid var(--line)}
 @media (max-width:520px){nav a{margin-left:12px}.hero{padding:36px 0 28px}}
 </style>
@@ -56,20 +68,43 @@ footer{padding:30px 0 40px;color:var(--muted);font-size:14px;border-top:1px soli
 <div class="wrap">
   <header class="top">
     <a class="logo" href="#">rj<span>.</span></a>
-    <nav><a href="#projects">Projects</a><a href="#about">About</a><a href="#contact">Contact</a></nav>
+    <nav><a href="#experience">Experience</a><a href="#projects">Projects</a><a href="#contact">Contact</a></nav>
   </header>
 
   <div class="hero">
-    <h1>Hi, I'm <em>riteshj</em>.<br>I build small, dependable tools.</h1>
-    <p>Desktop utilities, personal apps and data-science experiments, mostly built to fix my own everyday problems, with AI pair-programming along the way.</p>
+    <h1>Hi, I'm <em>Ritesh Jethmalani</em>.<br>I build secure, large-scale systems.</h1>
+    <p>Senior Software Engineer with 15+ years across Microsoft, Amazon and GE, working on cloud, data and distributed systems with a strong focus on security. Outside work I build small, dependable tools for my own setup.</p>
     <div class="btns">
-      <a class="btn primary" href="#projects">See projects</a>
-      <a class="btn" href="https://github.com/claudetourist">GitHub</a>
+      <a class="btn primary" href="#experience">Experience</a>
+      <a class="btn" href="#projects">Side projects</a>
+      <a class="btn" href="https://www.linkedin.com/in/ritesh-jethmalani/">LinkedIn</a>
     </div>
   </div>
 
+  <section id="experience">
+    <h2>Experience</h2>
+    <ol class="timeline">
+      <li><div class="when">2022 – now</div><div><h3>Microsoft Purview</h3><p class="role">Senior Software Engineer · eDiscovery, Insider Risk Management</p><p>Pipelines processing billions of events a day; led a core data-store migration to Kusto across public and sovereign clouds; long-time security owner for the product org; tech lead on detection features; builds AI-assisted engineering tools such as an LLM incident-triage copilot and MCP servers.</p></div></li>
+      <li><div class="when">2020 – 2022</div><div><h3>Microsoft Intune</h3><p class="role">Software Engineer</p><p>Owned core reporting infrastructure across 50+ microservices; redesigned event processing for horizontal scale and isolation.</p></div></li>
+      <li><div class="when">2014 – 2020</div><div><h3>Microsoft Azure</h3><p class="role">Software Engineer · Maps, Key Vault, Bing, Site Recovery</p><p>Took streaming batch and matrix APIs to GA, built managed storage-account keys from preview to GA, and shipped SQL AlwaysOn disaster-recovery support.</p></div></li>
+      <li><div class="when">2012 – 2014</div><div><h3>Amazon</h3><p class="role">Software Developer</p><p>E-commerce platform services: a faster data-access layer, address-system improvements, and a major country launch.</p></div></li>
+      <li><div class="when">2011 – 2012</div><div><h3>GE Wind Energy software</h3><p class="role">Software Engineer</p><p>Turbine software tooling and release work.</p></div></li>
+    </ol>
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="skills">
+      <div><h3>Security</h3><p>Managed Identity, secrets &amp; key management, application-level encryption, threat modeling, production hardening</p></div>
+      <div><h3>Data</h3><p>Apache Spark, Kusto/KQL, Azure Data Factory, Event Hubs, Cosmos DB, SQL, Postgres, batch &amp; streaming</p></div>
+      <div><h3>Cloud &amp; systems</h3><p>Azure, Service Fabric, Durable Functions, microservices, REST APIs, large migrations, on-call &amp; reliability</p></div>
+      <div><h3>AI engineering</h3><p>Azure OpenAI, MCP servers, LLM triage tools, agent-ready repositories, AI code review</p></div>
+      <div><h3>Languages</h3><p>C#/.NET, Scala, Java, C++, Python, JavaScript/TypeScript</p></div>
+    </div>
+  </section>
+
   <section id="projects">
-    <h2>Projects</h2>
+    <h2>Side projects</h2>
     <div class="grid">
       <div class="card">
         <h3>Backup Hub</h3>
@@ -97,8 +132,8 @@ footer{padding:30px 0 40px;color:var(--muted);font-size:14px;border-top:1px soli
 
   <section id="about" class="about">
     <h2>About</h2>
-    <p>I like software that stays simple, explains itself, and keeps working for years. Most of what I build starts as a fix for my own setup, such as backups, file organisation and personal finance, and grows into a proper tool.</p>
-    <p>I also enjoy data competitions as a way to learn forecasting and machine-learning techniques on real-world problems.</p>
+    <p>I like turning ambiguous, cross-team problems into shipped designs, keeping calm on live-site incidents, and helping engineers grow into independent owners. B.E. in Computer Science from Mumbai University; past Facebook Hacker Cup semi-finalist.</p>
+    <p>At home I like software that stays simple, explains itself, and keeps working for years. My side projects start as fixes for my own setup, such as backups, file organisation and personal finance. I also enjoy data competitions as a way to practise forecasting on real-world problems.</p>
     <div class="side">
       <div class="badge" aria-hidden="true">📖</div>
       <div>
@@ -111,12 +146,13 @@ footer{padding:30px 0 40px;color:var(--muted);font-size:14px;border-top:1px soli
   <section id="contact" class="contact">
     <h2>Contact</h2>
     <ul>
+      <li><a class="btn" href="https://www.linkedin.com/in/ritesh-jethmalani/">LinkedIn · ritesh-jethmalani</a></li>
       <li><a class="btn" href="https://github.com/claudetourist">GitHub · claudetourist</a></li>
       <li><a class="btn" href="https://www.instagram.com/myth.learn/">Instagram · @myth.learn</a></li>
     </ul>
   </section>
 
-  <footer>© 2026 riteshj · Hand-written HTML, hosted on GitHub Pages.</footer>
+  <footer>© 2026 Ritesh Jethmalani · Hand-written HTML, hosted on GitHub Pages.</footer>
 </div>
 </body>
 </html>
